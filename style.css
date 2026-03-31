@@ -3398,11 +3398,10 @@ header.header--scrolled {
 .strategy-panel--g img {
   width: auto;
   height: 100%;
-  left: 250%;
+  left: 50%;
   right: auto;
   top: 0;
-  bottom: 0;
-  transform: translateX(-100%);
+  transform: none;
   object-fit: unset;
 }
 
