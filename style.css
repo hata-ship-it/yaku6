@@ -3242,3 +3242,219 @@ header.header--scrolled {
   letter-spacing: 1.5px;
   font-size: 13px;
 }
+
+/* ===== STRATEGY HORIZONTAL SCROLL SECTION ===== */
+.strategy-section {
+  position: relative;
+  background: #0d0d0d;
+  /* height set by JS: 100vh + max horizontal translate */
+}
+
+.strategy-sticky {
+  position: sticky;
+  top: 86px;
+  height: calc(100vh - 86px);
+  overflow: hidden;
+  background: #0d0d0d;
+}
+
+.strategy-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* Width mirrors the reference panorama aspect ratio 3044:810 */
+  width: calc(3044 / 810 * 100vh);
+  background: #0d0d0d;
+  will-change: transform;
+}
+
+/* Arc SVG */
+.strategy-arcs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Horizontal light streak */
+.strategy-light-streak {
+  position: absolute;
+  left: 22%;
+  width: 34%;
+  top: 80.5%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 240, 200, 0.45) 18%,
+    rgba(255, 255, 255, 0.88) 50%,
+    rgba(255, 240, 200, 0.45) 82%,
+    transparent 100%
+  );
+  filter: blur(2px);
+  z-index: 7;
+  pointer-events: none;
+}
+
+/* Panels */
+.strategy-panel {
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.strategy-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.strategy-panel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  filter: grayscale(1) brightness(0.65);
+}
+
+/* Panel A – large left (person working, full height) */
+.strategy-panel--a {
+  left: 3.5%;
+  width: 18.15%;
+  top: 0;
+  height: 100%;
+}
+
+/* Panel B – center top (laptop / hands) */
+.strategy-panel--b {
+  left: 21.65%;
+  width: 22.2%;
+  top: 0;
+  height: 60.5%;
+  z-index: 2;
+}
+
+/* Panel C – center middle overlap (hands / documents) */
+.strategy-panel--c {
+  left: 30.2%;
+  width: 12.1%;
+  top: 64%;
+  height: 40%;
+  z-index: 3;
+}
+
+/* Panel D – small bottom (cleaning bottle) */
+.strategy-panel--d {
+  left: 80.5%;
+  width: 14%;
+  top: 50%;
+  height: 48%;
+  z-index: 4;
+}
+
+/* Panel E – large right (person writing, full height) */
+.strategy-panel--e {
+  left: 43.85%;
+  width: 35.65%;
+  top: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Panel F – small top-right */
+.strategy-panel--f {
+  left: 78.4%;
+  width: 9.5%;
+  top: 0;
+  height: 37%;
+  z-index: 3;
+}
+
+/* Panel G – far right end (jimusho) */
+.strategy-panel--g::after {
+  display: none;
+}
+
+.strategy-panel--g {
+  left: 79.5%;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 2;
+  overflow: visible;
+}
+
+.strategy-panel--g img {
+  width: auto;
+  height: 100%;
+  left: 250%;
+  right: auto;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  object-fit: unset;
+}
+
+/* Text overlays */
+.strategy-text {
+  position: absolute;
+  z-index: 8;
+  pointer-events: none;
+}
+
+.strategy-text--left {
+  left: 4.5%;
+  bottom: 10%;
+}
+
+.strategy-text--right {
+  left: 52.5%;
+  top: 28%;
+  text-align: right;
+}
+
+.strategy-ja {
+  font-family: var(--font-jp);
+  font-size: 2.1vw;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.75;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
+
+.strategy-text--right .strategy-ja {
+  font-size: 2.1vw;
+  letter-spacing: 0.22em;
+  line-height: 1.95;
+}
+
+/* vision-section がヒーローの上にスライドしてくるオーバーレイ */
+.vision-section--overlay {
+  position: relative;
+  z-index: 10;
+  background: var(--color-bg-light);
+  box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.strategy-en {
+  font-family: var(--font-en);
+  font-size: 0.7vw;
+  color: rgba(255, 255, 255, 0.48);
+  letter-spacing: 0.07em;
+  margin-top: 10px;
+  white-space: nowrap;
+  font-style: italic;
+}

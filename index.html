@@ -61,22 +61,75 @@
     </div>
   </header>
 
-  <!-- STICKY HERO ZONE -->
-  <div class="hero-sticky-zone">
+  <!-- STRATEGY HORIZONTAL SCROLL HERO -->
+  <section class="strategy-section">
+    <div class="strategy-sticky">
+      <div class="strategy-track">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <video src="images/u2837383316_______________--ar_4336_--motion_low_--video_1_bd1ca54e-67f8-400e-8b94-d11e8703c064_0.mp4" autoplay loop muted playsinline></video>
-      <div class="hero-catch">
-        <p>屋久島からしか</p>
-        <p>できない物語を。</p>
+        <!-- Background arc decoration -->
+        <svg class="strategy-arcs" viewBox="0 0 3044 810" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="1340" cy="1800" r="1100" fill="none" stroke="rgba(200,175,110,0.18)" stroke-width="1.2"/>
+          <circle cx="1340" cy="1800" r="1340" fill="none" stroke="rgba(200,175,110,0.14)" stroke-width="1.2"/>
+          <circle cx="1340" cy="1800" r="1580" fill="none" stroke="rgba(200,175,110,0.10)" stroke-width="1.2"/>
+          <circle cx="1340" cy="1800" r="1820" fill="none" stroke="rgba(200,175,110,0.07)" stroke-width="1.2"/>
+        </svg>
+
+        <!-- Light streak effect -->
+        <div class="strategy-light-streak"></div>
+
+        <!-- Panel A: Large left – person working -->
+        <div class="strategy-panel strategy-panel--a">
+          <img src="images/figma-about-top-right.jpg" alt="">
+        </div>
+
+        <!-- Left caption -->
+        <div class="strategy-text strategy-text--left">
+          <p class="strategy-ja">自然と人々と</p>
+          <p class="strategy-en">The success of people known as "lifestyle specialists"</p>
+        </div>
+
+        <!-- Panel B: Center top – hands / laptop -->
+        <div class="strategy-panel strategy-panel--b">
+          <img src="https://picsum.photos/seed/stra2/700/500" alt="">
+        </div>
+
+        <!-- Panel C: Center middle overlap – hands / documents -->
+        <div class="strategy-panel strategy-panel--c">
+          <img src="https://picsum.photos/seed/stra3/500/400" alt="">
+        </div>
+
+        <!-- Panel D: Small – cleaning bottle -->
+        <div class="strategy-panel strategy-panel--d">
+          <img src="images/hero.png" alt="">
+        </div>
+
+        <!-- Panel E: Large right – hands writing -->
+        <div class="strategy-panel strategy-panel--e">
+          <img src="https://picsum.photos/seed/stra5/800/1000" alt="">
+        </div>
+
+        <!-- Right caption -->
+        <div class="strategy-text strategy-text--right">
+          <p class="strategy-ja">人口１万人の<br>この島から。</p>
+          <p class="strategy-en">The passion of people known as "lifestyle specialists"</p>
+        </div>
+
+        <!-- Panel F: Small top-right -->
+        <div class="strategy-panel strategy-panel--f">
+          <img src="https://picsum.photos/seed/stra6/400/300" alt="">
+        </div>
+
+        <!-- Panel G: Far right – jimusho -->
+        <div class="strategy-panel strategy-panel--g">
+          <img src="images/jimusho.png" alt="">
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- VISION / ABOUT SECTION -->
-  <section id="about" class="vision-section">
+  <!-- VISION / ABOUT SECTION – slides over hero on scroll -->
+  <section id="about" class="vision-section vision-section--overlay">
     <div class="vision-body">
       <h1 class="vision-section-title">屋久島共鳴研究所<br>YAKUAHIMA HARMONIA LAB</h1>
       <div class="vision-text">
@@ -165,8 +218,6 @@
     </div>
   </section>
 
-
-  </div><!-- /hero-sticky-zone -->
 
   <!-- PRODUCTS SECTION -->
   <section id="products" class="products-section">

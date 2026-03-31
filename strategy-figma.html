@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategy Section – Figma Export</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@300;400;700&family=Inter:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --font-jp: 'Noto Serif JP', 'Noto Sans JP', serif;
+      --font-en: 'Cormorant Garamond', 'Inter', serif;
+    }
+
+    body {
+      background: #0d0d0d;
+      width: 3044px;
+      height: 810px;
+      overflow: hidden;
+    }
+
+    /* ── strategy-track を静的に全幅表示 ── */
+    .strategy-track {
+      position: relative;
+      width: 3044px;
+      height: 810px;
+      background: #0d0d0d;
+    }
+
+    /* Arc SVG */
+    .strategy-arcs {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    /* Horizontal light streak */
+    .strategy-light-streak {
+      position: absolute;
+      left: 22%;
+      width: 34%;
+      top: 80.5%;
+      height: 2px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255,240,200,0.45) 18%,
+        rgba(255,255,255,0.88) 50%,
+        rgba(255,240,200,0.45) 82%,
+        transparent 100%
+      );
+      filter: blur(2px);
+      z-index: 7;
+      pointer-events: none;
+    }
+
+    /* Panels */
+    .strategy-panel {
+      position: absolute;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .strategy-panel::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.28);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .strategy-panel img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: grayscale(1) brightness(0.65);
+    }
+
+    /* Panel A – large left */
+    .strategy-panel--a { left: 3.5%;  width: 18.15%; top: 0;   height: 100%; }
+    /* Panel B – center top */
+    .strategy-panel--b { left: 21.65%; width: 22.2%;  top: 0;   height: 60.5%; z-index: 2; }
+    /* Panel C – center middle overlap */
+    .strategy-panel--c { left: 24.65%; width: 12.1%;  top: 52%; height: 40%;   z-index: 3; }
+    /* Panel D – small bottom */
+    .strategy-panel--d { left: 30.75%; width: 7.5%;   top: 66%; height: 26%;   z-index: 4; }
+    /* Panel E – large right */
+    .strategy-panel--e { left: 43.85%; width: 35.65%; top: 0;   height: 100%; z-index: 2; }
+    /* Panel F – small top-right */
+    .strategy-panel--f { left: 78.4%;  width: 9.5%;   top: 0;   height: 37%;  z-index: 3; }
+
+    /* Text overlays */
+    .strategy-text {
+      position: absolute;
+      z-index: 8;
+      pointer-events: none;
+    }
+    .strategy-text--left  { left: 4.5%;  bottom: 10%; }
+    .strategy-text--right { left: 52.5%; top: 28%; text-align: right; }
+
+    .strategy-ja {
+      font-family: var(--font-jp);
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.75;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.55);
+    }
+    .strategy-text--right .strategy-ja {
+      font-size: 30px;
+      letter-spacing: 0.22em;
+      line-height: 1.95;
+    }
+    .strategy-en {
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: rgba(255,255,255,0.48);
+      letter-spacing: 0.07em;
+      margin-top: 10px;
+      white-space: nowrap;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="strategy-track">
+
+    <!-- Background arc decoration -->
+    <svg class="strategy-arcs" viewBox="0 0 3044 810" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="1340" cy="1800" r="1100" fill="none" stroke="rgba(200,175,110,0.18)" stroke-width="1.2"/>
+      <circle cx="1340" cy="1800" r="1340" fill="none" stroke="rgba(200,175,110,0.14)" stroke-width="1.2"/>
+      <circle cx="1340" cy="1800" r="1580" fill="none" stroke="rgba(200,175,110,0.10)" stroke-width="1.2"/>
+      <circle cx="1340" cy="1800" r="1820" fill="none" stroke="rgba(200,175,110,0.07)" stroke-width="1.2"/>
+    </svg>
+
+    <!-- Light streak effect -->
+    <div class="strategy-light-streak"></div>
+
+    <!-- Panel A: Large left – person working -->
+    <div class="strategy-panel strategy-panel--a">
+      <img src="https://picsum.photos/seed/stra1/600/900" alt="">
+    </div>
+
+    <!-- Left caption -->
+    <div class="strategy-text strategy-text--left">
+      <p class="strategy-ja">人口１万人の<br>屋久島から</p>
+      <p class="strategy-en">The success of people known as "lifestyle specialists"</p>
+    </div>
+
+    <!-- Panel B: Center top – hands / laptop -->
+    <div class="strategy-panel strategy-panel--b">
+      <img src="https://picsum.photos/seed/stra2/700/500" alt="">
+    </div>
+
+    <!-- Panel C: Center middle overlap – hands / documents -->
+    <div class="strategy-panel strategy-panel--c">
+      <img src="https://picsum.photos/seed/stra3/500/400" alt="">
+    </div>
+
+    <!-- Panel D: Small – cleaning bottle -->
+    <div class="strategy-panel strategy-panel--d">
+      <img src="https://picsum.photos/seed/stra4/350/300" alt="">
+    </div>
+
+    <!-- Panel E: Large right – hands writing -->
+    <div class="strategy-panel strategy-panel--e">
+      <img src="https://picsum.photos/seed/stra5/800/1000" alt="">
+    </div>
+
+    <!-- Right caption -->
+    <div class="strategy-text strategy-text--right">
+      <p class="strategy-ja">どんな成功も、<br>再現できなければ<br>意味がない。</p>
+      <p class="strategy-en">The passion of people known as "lifestyle specialists"</p>
+    </div>
+
+    <!-- Panel F: Small top-right -->
+    <div class="strategy-panel strategy-panel--f">
+      <img src="https://picsum.photos/seed/stra6/400/300" alt="">
+    </div>
+
+  </div>
+</body>
+</html>
