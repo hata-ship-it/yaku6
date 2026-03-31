@@ -36,18 +36,6 @@
   window.addEventListener('scroll', scroll, { passive: true });
 })();
 
-/* ===== HERO OVERLAY: darkens as sections scroll over it ===== */
-(function () {
-  const hero = document.querySelector('.hero');
-  if (!hero) return;
-  const onScroll = () => {
-    const progress = Math.min(1, window.scrollY / (window.innerHeight * 0.6));
-    hero.style.setProperty('--hero-overlay', progress * 0.72);
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-})();
-
 /* ===== ACCORDION ===== */
 (function () {
   document.querySelectorAll('.accordion-header').forEach(function (header) {
