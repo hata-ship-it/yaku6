@@ -3395,6 +3395,26 @@ header.header--scrolled {
   overflow: visible;
 }
 
+.strategy-panel-g-text {
+  position: absolute;
+  left: 150%;
+  bottom: 10%;
+  z-index: 10;
+  text-align: left;
+  pointer-events: none;
+}
+
+.strategy-panel-g-text p:not(.strategy-en) {
+  font-family: var(--font-jp);
+  font-size: 2.1vw;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.75;
+  letter-spacing: 0.06em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+  white-space: nowrap;
+}
+
 .strategy-panel--g img {
   width: auto;
   height: 100%;
